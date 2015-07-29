@@ -20,7 +20,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="24dp"
-            android:text="@string/about_message" />
+            android:text="@string/about_message"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
             android:id="@+id/linkTextView"
@@ -39,5 +40,6 @@
             android:paddingBottom="24dp"
             android:text="@string/copyright_message"
             android:textSize="12sp" />
+
     </LinearLayout>
 </RelativeLayout>

@@ -17,10 +17,10 @@ import java.util.List;
 public class MainActivity extends Activity {
 
     static private boolean editing = true;
-    static private List<BigDecimal> stack = new ArrayList<>();
+    static private final List<BigDecimal> stack = new ArrayList<>();
     static private BigDecimal store = new BigDecimal("0");
 
-    public void push() {
+    private void push() {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
         String text = displayEditText.getText().toString();
         BigDecimal n = new BigDecimal(text.length() > 0 ? text : "0");
@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         editing = false;
     }
 
-    public void show() {
+    private void show() {
         String display3 = stack.size() > 2 ? stack.get(2).toString() : "";
         TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
         displayEditText3.setText(display3);
@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
         }
     }
 
-    public void addDigit(String digit) {
+    private void addDigit(String digit) {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
         if (!editing) {
             displayEditText.setText("");
