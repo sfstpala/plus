@@ -1,6 +1,7 @@
 package de.plzz.plus;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -250,7 +251,9 @@ public class MainActivity extends Activity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_about) {
+            Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+            MainActivity.this.startActivity(aboutIntent);
             return true;
         }
 

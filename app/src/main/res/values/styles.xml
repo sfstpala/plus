@@ -6,7 +6,12 @@
     </style>
 
     <!-- Base application theme. -->
-    <style name="MainActivityTheme" parent="android:Theme.Material.NoActionBar">
+    <style name="MainActivityTheme" parent="android:Theme.Material">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AboutActivityTheme" parent="android:Theme.Material">
         <!-- Customize your theme here. -->
     </style>
 
