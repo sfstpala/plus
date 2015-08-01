@@ -23,9 +23,12 @@ public class MainActivity extends Activity {
     private void push() {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
         String text = displayEditText.getText().toString();
-        BigDecimal n = new BigDecimal(text.length() > 0 ? text : "0");
-        stack.add(0, n);
-        editing = false;
+        BigDecimal n;
+        try {
+            n = new BigDecimal(text.length() > 0 ? text : "0");
+            stack.add(0, n);
+            editing = false;
+        } catch (NumberFormatException e) {}
     }
 
     private void show() {
