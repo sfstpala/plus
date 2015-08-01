@@ -54,7 +54,7 @@
         \n3 4 + 2 ×\n
         \nNote how the expression could only have been written this way. If we got rid of the
         parentheses, we would translate the expression to 3 4 2 × + instead.\n
-        \nImagine a stack of numbers. Typing 3 and then Enter will put the number two on the stack.
+        \nImagine a stack of numbers. Typing 3 and then Enter will put the number 3 on the stack.
         With one number on the stack, we can do operations that only need one operand, like negating
         the number (+/−). If we now type another 3, we can (immediately) use an operator
         that takes two operands, such as +.\n
