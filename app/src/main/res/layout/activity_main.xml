@@ -16,7 +16,8 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
 
             <EditText
                 android:id="@+id/displayEditText3"
@@ -38,7 +39,8 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
 
             <EditText
                 android:id="@+id/displayEditText2"
@@ -60,7 +62,8 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_weight="1">
 
             <EditText
                 android:id="@+id/displayEditText1"
@@ -83,20 +86,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="4">
-
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_column="4"
-                android:layout_weight="4" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonDelete"
@@ -135,7 +125,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="4">
+            android:layout_weight="2">
 
             <Button
                 android:id="@+id/buttonStore"
@@ -166,15 +156,15 @@
                 android:layout_column="2"
                 android:layout_span="1"
                 android:layout_weight="2"
-                android:text="@string/button_enter"
-                android:onClick="onButtonEnterClick" />
+                android:onClick="onButtonEnterClick"
+                android:text="@string/button_enter" />
 
         </TableRow>
 
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button7"
@@ -224,7 +214,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button4"
@@ -274,7 +264,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button1"
@@ -324,7 +314,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/button0"
