@@ -40,4 +40,33 @@
     <string name="button_1">1</string>
     <string name="button_2">2</string>
     <string name="button_3">3</string>
+    <string name="title_activity_help">Help</string>
+    <string name="help_title">How to use RPN</string>
+    <string name="help_message">Reverse Polish Notation (RPN) is an alternative to infix notation,
+        i.e. rather than writing the operator in between the operands (2 + 2), you will write the
+        operator after the operands (2 2 +).\n
+        \nLet\'s calculate\n
+        \n(3 + 4) × 2\n
+        \nNotice how we have to place parentheses around the first
+        part of the expression because, in infix notation, the multiplication operator has a higher
+        precedence than the addition operator, and parentheses have a higher precendence still. In
+        reverse polish notation, there is no operator precedence. We can simply type\n
+        \n3 4 + 2 ×\n
+        \nNote how the expression could only have been written this way. If we got rid of the
+        parentheses, we would translate the expression to 3 4 2 × + instead.\n
+        \nImagine a stack of numbers. Typing 3 and then Enter will put the number two on the stack.
+        With one number on the stack, we can do operations that only need one operand, like negating
+        the number (+/−). If we now type another 3, we can (immediately) use an operator
+        that takes two operands, such as +.\n
+        \nIn our example, (3 + 4) × 2, the stack will evolve like this:\n
+        \n3
+        \n3 4
+        \n7
+        \n7 2
+        \n14
+        \n\nFor more information, see:
+        \nhttps://en.wikipedia.org/wiki/Reverse_Polish_notation
+    </string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_help">Help</string>
 </resources>

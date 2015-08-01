@@ -16,8 +16,8 @@ import java.util.List;
 
 public class MainActivity extends Activity {
 
-    static private boolean editing = true;
     static private final List<BigDecimal> stack = new ArrayList<>();
+    static private boolean editing = true;
     static private BigDecimal store = new BigDecimal("0");
 
     private void push() {
@@ -257,6 +257,11 @@ public class MainActivity extends Activity {
         if (id == R.id.action_about) {
             Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
             MainActivity.this.startActivity(aboutIntent);
+            return true;
+        }
+        if (id == R.id.action_help) {
+            Intent helpIntent = new Intent(MainActivity.this, HelpActivity.class);
+            MainActivity.this.startActivity(helpIntent);
             return true;
         }
 
