@@ -10,8 +10,11 @@ import android.widget.TextView;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 
 public class MainActivity extends Activity {
@@ -20,25 +23,27 @@ public class MainActivity extends Activity {
     static private boolean editing = true;
     static private BigDecimal store = new BigDecimal("0");
 
+    static private DecimalFormat formatter;
+
     private void push() {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
-        String text = displayEditText.getText().toString();
+        String text = displayEditText.getText().toString().replaceAll("[^\\d.]", "");
         BigDecimal n;
         try {
             n = new BigDecimal(text.length() > 0 ? text : "0");
             stack.add(0, n);
             editing = false;
-        } catch (NumberFormatException e) {}
+        } catch (NumberFormatException ignored) {}
     }
 
     private void show() {
-        String display3 = stack.size() > 2 ? stack.get(2).toString() : "";
+        String display3 = stack.size() > 2 ? formatter.format(stack.get(2)) : "";
         TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
         displayEditText3.setText(display3);
-        String display2 = stack.size() > 1 ? stack.get(1).toString() : "";
+        String display2 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
         TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
         displayEditText2.setText(display2);
-        String display1 = stack.size() > 0 ? stack.get(0).toString() : "0";
+        String display1 = stack.size() > 0 ? formatter.format(stack.get(0)) : "0";
         TextView displayEditText1 = (TextView) findViewById(R.id.displayEditText1);
         displayEditText1.setText(display1);
     }
@@ -176,8 +181,8 @@ public class MainActivity extends Activity {
             displayEditText.setText("");
         }
         String text = displayEditText.getText().toString();
-        BigDecimal n = new BigDecimal(text + digit);
-        displayEditText.setText(n.toString());
+        BigDecimal n = new BigDecimal(text.replaceAll("[^\\d.]", "") + digit);
+        displayEditText.setText(formatter.format(n));
         editing = true;
     }
 
@@ -228,7 +233,7 @@ public class MainActivity extends Activity {
         }
         String text = displayEditText.getText().toString();
         if (!text.contains(".")) {
-            displayEditText.setText(text + ".");
+            displayEditText.setText(String.format("%s.", text));
         }
         editing = true;
     }
@@ -237,6 +242,8 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Locale locale = getResources().getConfiguration().locale;
+        formatter = (DecimalFormat) NumberFormat.getInstance(locale);
     }
 
     @Override
