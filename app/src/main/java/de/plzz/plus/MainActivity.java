@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,8 +23,11 @@ public class MainActivity extends Activity {
     static private final List<BigDecimal> stack = new ArrayList<>();
     static private boolean editing = true;
     static private BigDecimal store = new BigDecimal("0");
+    public static final int decimalDigits = 12;
 
     static private DecimalFormat formatter;
+
+    static private final String decimalSeparator = String.valueOf(DecimalFormatSymbols.getInstance().getDecimalSeparator());
 
     private void push() {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
@@ -181,8 +185,14 @@ public class MainActivity extends Activity {
             displayEditText.setText("");
         }
         String text = displayEditText.getText().toString();
-        BigDecimal n = new BigDecimal(text.replaceAll("[^\\d.]", "") + digit);
-        displayEditText.setText(formatter.format(n));
+        text = text.replaceAll("[^\\d" + decimalSeparator + "]", "") + digit;
+        if (text.split("\\.").length > 1 && text.split("\\.")[1].length() > decimalDigits) {
+            return;
+        }
+        if (text.matches("^0[123456789]")) {
+            text = text.substring(1);
+        }
+        displayEditText.setText(text);
         editing = true;
     }
 
@@ -232,8 +242,8 @@ public class MainActivity extends Activity {
             displayEditText.setText("");
         }
         String text = displayEditText.getText().toString();
-        if (!text.contains(".")) {
-            displayEditText.setText(String.format("%s.", text));
+        if (!text.contains(decimalSeparator)) {
+            displayEditText.setText(String.format("%s" + decimalSeparator, text));
         }
         editing = true;
     }
@@ -244,6 +254,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         Locale locale = getResources().getConfiguration().locale;
         formatter = (DecimalFormat) NumberFormat.getInstance(locale);
+        formatter.setMaximumFractionDigits(decimalDigits);
     }
 
     @Override
