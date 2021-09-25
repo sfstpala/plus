@@ -41,15 +41,24 @@ public class MainActivity extends Activity {
     }
 
     private void show() {
-        String display3 = stack.size() > 2 ? formatter.format(stack.get(2)) : "";
-        TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
-        displayEditText3.setText(display3);
-        String display2 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
-        TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
-        displayEditText2.setText(display2);
-        String display1 = stack.size() > 0 ? formatter.format(stack.get(0)) : "0";
-        TextView displayEditText1 = (TextView) findViewById(R.id.displayEditText1);
-        displayEditText1.setText(display1);
+        if (editing) {
+            String display3 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
+            TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
+            displayEditText3.setText(display3);
+            String display2 = stack.size() > 0 ? formatter.format(stack.get(0)) : "";
+            TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
+            displayEditText2.setText(display2);
+        } else {
+            String display3 = stack.size() > 2 ? formatter.format(stack.get(2)) : "";
+            TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
+            displayEditText3.setText(display3);
+            String display2 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
+            TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
+            displayEditText2.setText(display2);
+            String display1 = stack.size() > 0 ? formatter.format(stack.get(0)) : "0";
+            TextView displayEditText1 = (TextView) findViewById(R.id.displayEditText1);
+            displayEditText1.setText(display1);
+        }
     }
 
     public void onButtonAddClick(View view) {
@@ -194,6 +203,7 @@ public class MainActivity extends Activity {
         }
         displayEditText.setText(text);
         editing = true;
+        show();
     }
 
     public void onButton7Click(View view) {
