@@ -98,7 +98,8 @@
                 android:layout_span="0"
                 android:layout_weight="2"
                 android:onClick="onButtonDeleteClick"
-                android:text="@string/button_delete" />
+                android:text="@string/button_delete"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
             <Button
                 android:id="@+id/buttonSwap"
@@ -109,6 +110,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonSwapClick"
                 android:text="@string/button_swap"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="12sp" />
 
             <Button
@@ -120,6 +122,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonDownClick"
                 android:text="@string/button_down"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="12sp" />
 
         </TableRow>
@@ -127,7 +130,7 @@
         <TableRow
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:layout_weight="2">
+            android:layout_weight="1">
 
             <Button
                 android:id="@+id/buttonStore"
@@ -138,6 +141,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonStoreClick"
                 android:text="@string/button_store"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="12sp" />
 
             <Button
@@ -149,6 +153,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonRecallClick"
                 android:text="@string/button_recall"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="12sp" />
 
             <Button
@@ -159,7 +164,8 @@
                 android:layout_span="1"
                 android:layout_weight="2"
                 android:onClick="onButtonEnterClick"
-                android:text="@string/button_enter" />
+                android:text="@string/button_enter"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1" />
 
         </TableRow>
 
@@ -177,6 +183,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton7Click"
                 android:text="@string/button_7"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -188,6 +195,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton8Click"
                 android:text="@string/button_8"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -199,6 +207,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton9Click"
                 android:text="@string/button_9"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -210,6 +219,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonDivideClick"
                 android:text="@string/button_divide"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -227,6 +237,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton4Click"
                 android:text="@string/button_4"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -238,6 +249,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton5Click"
                 android:text="@string/button_5"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -249,6 +261,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton6Click"
                 android:text="@string/button_6"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -260,6 +273,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonMultiplyClick"
                 android:text="@string/button_multiply"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -277,6 +291,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton1Click"
                 android:text="@string/button_1"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -288,6 +303,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton2Click"
                 android:text="@string/button_2"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -299,6 +315,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton3Click"
                 android:text="@string/button_3"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -310,6 +327,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonSubtractClick"
                 android:text="@string/button_subtract"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
         </TableRow>
 
@@ -327,6 +345,7 @@
                 android:layout_weight="1"
                 android:onClick="onButton0Click"
                 android:text="@string/button_0"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -338,6 +357,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonDotClick"
                 android:text="@string/button_dot"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -349,6 +369,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonNegateClick"
                 android:text="@string/button_negate"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
 
             <Button
@@ -360,6 +381,7 @@
                 android:layout_weight="1"
                 android:onClick="onButtonAddClick"
                 android:text="@string/button_add"
+                android:textAppearance="@android:style/TextAppearance.Material.Body1"
                 android:textSize="18sp" />
         </TableRow>
 
