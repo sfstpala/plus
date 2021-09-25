@@ -155,7 +155,7 @@ public class MainActivity extends Activity {
         if (editing) {
             push();
         }
-        store = stack.get(0);
+        store = stack.size() > 0 ? stack.get(0) : new BigDecimal("0");
         show();
     }
 
@@ -181,6 +181,7 @@ public class MainActivity extends Activity {
             displayEditText.setText(text.subSequence(0, text.length() - 1));
         } else if (editing) {
             displayEditText.setText("0");
+            editing = false;
         } else if (stack.size() >= 2) {
             stack.remove(0);
             show();
