@@ -1,7 +1,7 @@
 # Plus
 
-[![Get it on Google Play](https://developer.android.com/images/brand/en_generic_rgb_wo_45.png)](http://play.google.com/store/apps/details?id=de.plzz.plus)
+[<img src="https://raw.githubusercontent.com/sfstpala/plus/master/app/contrib/google_play_badge.png" style="width: 160px;">](http://play.google.com/store/apps/details?id=de.plzz.plus)
 
 This is a basic RPN Calculator for Android.
 
-![Screenshot](https://raw.githubusercontent.com/sfstpala/plus/master/app/contrib/screenshots/phone-small.png)
+<img src="https://raw.githubusercontent.com/sfstpala/plus/master/app/contrib/screenshots/phone-1.png" style="width: 270px;"> <img src="https://raw.githubusercontent.com/sfstpala/plus/master/app/contrib/screenshots/phone-2.png" style="width: 270px;">
