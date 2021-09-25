@@ -31,7 +31,9 @@ public class MainActivity extends Activity {
 
     private void push() {
         TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
-        String text = displayEditText.getText().toString().replaceAll("[^\\d.]", "");
+        String text = displayEditText.getText().toString();
+        text = text.replaceAll("[" + decimalSeparator + "]", ".");
+        text = text.replaceAll("[^\\d.]", "");
         BigDecimal n;
         try {
             n = new BigDecimal(text.length() > 0 ? text : "0");
