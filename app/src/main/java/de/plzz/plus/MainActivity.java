@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     static private final String decimalSeparator = String.valueOf(DecimalFormatSymbols.getInstance().getDecimalSeparator());
 
     private void push() {
-        TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
+        TextView displayEditText = findViewById(R.id.displayEditText1);
         String text = displayEditText.getText().toString();
         text = text.replaceAll("[" + decimalSeparator + "]", ".");
         text = text.replaceAll("[^\\d.]", "");
@@ -45,20 +45,20 @@ public class MainActivity extends Activity {
     private void show() {
         if (editing) {
             String display3 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
-            TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
+            TextView displayEditText3 = findViewById(R.id.displayEditText3);
             displayEditText3.setText(display3);
             String display2 = stack.size() > 0 ? formatter.format(stack.get(0)) : "";
-            TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
+            TextView displayEditText2 = findViewById(R.id.displayEditText2);
             displayEditText2.setText(display2);
         } else {
             String display3 = stack.size() > 2 ? formatter.format(stack.get(2)) : "";
-            TextView displayEditText3 = (TextView) findViewById(R.id.displayEditText3);
+            TextView displayEditText3 = findViewById(R.id.displayEditText3);
             displayEditText3.setText(display3);
             String display2 = stack.size() > 1 ? formatter.format(stack.get(1)) : "";
-            TextView displayEditText2 = (TextView) findViewById(R.id.displayEditText2);
+            TextView displayEditText2 = findViewById(R.id.displayEditText2);
             displayEditText2.setText(display2);
             String display1 = stack.size() > 0 ? formatter.format(stack.get(0)) : "0";
-            TextView displayEditText1 = (TextView) findViewById(R.id.displayEditText1);
+            TextView displayEditText1 = findViewById(R.id.displayEditText1);
             displayEditText1.setText(display1);
         }
     }
@@ -175,7 +175,7 @@ public class MainActivity extends Activity {
     }
 
     public void onButtonDeleteClick(View view) {
-        TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
+        TextView displayEditText = findViewById(R.id.displayEditText1);
         CharSequence text = displayEditText.getText().toString();
         if (editing && text.length() > 1) {
             displayEditText.setText(text.subSequence(0, text.length() - 1));
@@ -192,7 +192,7 @@ public class MainActivity extends Activity {
     }
 
     private void addDigit(String digit) {
-        TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
+        TextView displayEditText = findViewById(R.id.displayEditText1);
         if (!editing) {
             displayEditText.setText("");
         }
@@ -250,7 +250,7 @@ public class MainActivity extends Activity {
     }
 
     public void onButtonDotClick(View view) {
-        TextView displayEditText = (TextView) findViewById(R.id.displayEditText1);
+        TextView displayEditText = findViewById(R.id.displayEditText1);
         if (!editing) {
             displayEditText.setText("");
         }
