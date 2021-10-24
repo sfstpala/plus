@@ -68,9 +68,9 @@ public class MainActivity extends Activity {
             push();
         }
         if (stack.size() >= 2) {
-            BigDecimal y = stack.remove(0);
             BigDecimal x = stack.remove(0);
-            stack.add(0, x.add(y));
+            BigDecimal y = stack.remove(0);
+            stack.add(0, y.add(x));
         }
         show();
     }
@@ -80,9 +80,9 @@ public class MainActivity extends Activity {
             push();
         }
         if (stack.size() >= 2) {
-            BigDecimal y = stack.remove(0);
             BigDecimal x = stack.remove(0);
-            stack.add(0, x.subtract(y));
+            BigDecimal y = stack.remove(0);
+            stack.add(0, y.subtract(x));
         }
         show();
     }
@@ -92,9 +92,9 @@ public class MainActivity extends Activity {
             push();
         }
         if (stack.size() >= 2) {
-            BigDecimal y = stack.remove(0);
             BigDecimal x = stack.remove(0);
-            stack.add(0, x.multiply(y));
+            BigDecimal y = stack.remove(0);
+            stack.add(0, y.multiply(x));
         }
         show();
     }
@@ -104,13 +104,13 @@ public class MainActivity extends Activity {
             push();
         }
         if (stack.size() >= 2) {
-            BigDecimal y = stack.remove(0);
             BigDecimal x = stack.remove(0);
+            BigDecimal y = stack.remove(0);
             try {
-                stack.add(0, x.divide(y, MathContext.DECIMAL64));
+                stack.add(0, y.divide(x, MathContext.DECIMAL64));
             } catch (ArithmeticException e) {
-                stack.add(0, x);
                 stack.add(0, y);
+                stack.add(0, x);
             }
         }
         show();
